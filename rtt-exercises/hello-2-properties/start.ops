@@ -5,7 +5,7 @@
 import("hello-2-properties")
 
 loadComponent("hello","Example::Hello")
-
+loadService("hello", "marshalling")
 var double period = 0.5
 setActivity("hello", period, LowestPriority , ORO_SCHED_OTHER )
 

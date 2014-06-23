@@ -4,9 +4,15 @@
  * This file demonstratess the Orocos TaskContext execution with
  * a 'hello world' example.
  */
-
+#include <rtt/os/main.h>
+#include <rtt/Logger.hpp>
 #include <rtt/RTT.hpp>
 #include <rtt/Component.hpp>
+#include <rtt/TaskContext.hpp>
+
+#include <iostream>
+#include <string>
+
 
 using namespace std;
 using namespace RTT;
@@ -60,14 +66,34 @@ namespace Example
 
         void updateHook()
         {
-        	log(Info) << "Update !" <<endlog();
+            log( Info ) << Running... << endlog();
+            std::cout << "Hello" << std::endl;
         }
+        
         bool configureHook()
         {
-        	return true;
+            log( Info ) << ConfigureHook called... << endlog();
+            return this->setPeriod(0.5);
         }
         bool startHook()
         {
+            log( Info ) << Starthook called... << endlog();
+            if(this->getPeriod() == 0.5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        void stopHook()
+        {
+            log( Info ) << Stophook called... << endlog();
+        }
+        void cleanupHook() 
+        {
+            log( Info ) << CleanupHook called... << endlog();
         }
     };
 }

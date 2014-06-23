@@ -117,7 +117,25 @@ namespace Example
 
         void updateHook()
         {
+
+            if ( input.read(read_helper) == NewData)
+            {
+                output.write(read_helper);
+            }
+            else
+            {
+                log( Info ) << Recieving Old Data... << endlog();
+            }
         }
+        bool configureHook()
+        {
+            return input.connected();
+        }
+        void stopHook()
+        {
+
+        }
+
     };
 
 	/**
