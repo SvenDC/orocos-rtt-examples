@@ -66,6 +66,9 @@ namespace Example
         {
         	return true;
         }
+        bool startHook()
+        {
+        }
     };
 }
 
