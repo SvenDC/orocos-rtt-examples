@@ -59,11 +59,11 @@ For each project, you must generate the Eclipse C++ project from the console. Fo
 
 $ cd hello-1-task-execution
 $ mkdir build ; cd build
-$ cmake .. -DCMAKE_GENERATOR="Eclipse CDT4 - Unix Makefiles" -DCMAKE_INSTALL_PREFIX=$(pwd)/../../install
+$ cmake .. -DCMAKE_GENERATOR-G="Eclipse CDT4 - Unix Makefiles" -DCMAKE_INSTALL_PREFIX=$(pwd)/../../install
 
 Now import this project in Eclipse using 'File' -> 'Import...' -> 'Existing projects into workspace'.
 
-You'll also need to add the 'automatically discovered' compiler paths in order to get the Eclipse Indexer
+You'll also need to add the 'aupdate_nvidia.shupdateutomatically discovered' compiler paths in order to get the Eclipse Indexer
 (syntax highlighting) working. Use:
 
 Kepler: Go to project properties, find 'Preprocessor Include Paths', then under the tab 'Providers' 
