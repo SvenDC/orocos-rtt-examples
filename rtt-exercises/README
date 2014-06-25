@@ -59,7 +59,7 @@ For each project, you must generate the Eclipse C++ project from the console. Fo
 
 $ cd hello-1-task-execution
 $ mkdir build ; cd build
-$ cmake .. -DCMAKE_GENERATOR-G="Eclipse CDT4 - Unix Makefiles" -DCMAKE_INSTALL_PREFIX=$(pwd)/../../install
+$ cmake .. -G"Eclipse CDT4 - Unix Makefiles" -DCMAKE_INSTALL_PREFIX=$(pwd)/../../install
 
 Now import this project in Eclipse using 'File' -> 'Import...' -> 'Existing projects into workspace'.
 
