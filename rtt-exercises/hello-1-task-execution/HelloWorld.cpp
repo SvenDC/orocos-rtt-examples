@@ -66,18 +66,18 @@ namespace Example
 
         void updateHook()
         {
-            log( Info ) << Running... << endlog();
+            log( Info ) << "Running..." << endlog();
             std::cout << "Hello" << std::endl;
         }
         
         bool configureHook()
         {
-            log( Info ) << ConfigureHook called... << endlog();
+            log( Info ) << "ConfigureHook called..." << endlog();
             return this->setPeriod(0.5);
         }
         bool startHook()
         {
-            log( Info ) << Starthook called... << endlog();
+            log( Info ) << "Starthook called..." << endlog();
             if(this->getPeriod() == 0.5)
             {
                 return true;
@@ -89,11 +89,11 @@ namespace Example
         }
         void stopHook()
         {
-            log( Info ) << Stophook called... << endlog();
+            log( Info ) << "Stophook called..." << endlog();
         }
         void cleanupHook() 
         {
-            log( Info ) << CleanupHook called... << endlog();
+            log( Info ) << "CleanupHook called..." << endlog();
         }
     };
 }

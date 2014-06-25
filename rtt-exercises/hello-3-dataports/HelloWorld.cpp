@@ -124,13 +124,10 @@ namespace Example
             }
             else
             {
-                log( Info ) << Recieving Old Data... << endlog();
+                log( Info ) << "Receiving Old Data..." << endlog();
             }
         }
-        bool configureHook()
-        {
-            return input.connected();
-        }
+
         void stopHook()
         {
 
@@ -164,7 +161,8 @@ namespace Example
 		  this->ports()->addPort( output ).doc("World's data producing port.");
 		}
 
-		void updateHook() {
+		void updateHook()
+		{
 			output.write( value );
 			++value;
 		}

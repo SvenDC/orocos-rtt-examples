@@ -36,7 +36,7 @@ $ cd ..
 Running
 -------
 
-If from the exercise directory, set (once) the component path
+If from the exercise directory ( Example: ../hello-1-task-execution ) , set (once) the component path
 to the lib/orocos directory of your install path:
 
 $ export RTT_COMPONENT_PATH=$(pwd)/../install/lib/orocos:$RTT_COMPONENT_PATH
