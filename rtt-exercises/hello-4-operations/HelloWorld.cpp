@@ -113,7 +113,7 @@ namespace Example
 
     	    // It is best practice to lookup methods of peers in
     	    // your configureHook.
-    	    getMessage = peer->getOperation("getmessage");
+    	    getMessage = peer->getOperation("getMessage");
     	    if ( !getMessage.ready() ) {
     	    	log(Error) << "Could not find Hello.getMessage Operation!"<<endlog();
     	    	return false;
