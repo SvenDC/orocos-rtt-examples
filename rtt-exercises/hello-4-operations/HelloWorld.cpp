@@ -76,6 +76,8 @@ namespace Example
             this->addOperation("getMessage", &Hello::getMessage, this).doc("Returns a friendly word.");
         }
 
+        bool sayIt(string sentence, string& answer)
+
     };
 
     /**
