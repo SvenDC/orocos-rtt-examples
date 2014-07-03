@@ -60,12 +60,28 @@ namespace Example
         /**
          * Returns a string.
          */
-        string getMessage() {
+        string getMessage()
+        {
             return "Hello World";
         }
         /** @} */
 
     public:
+
+        bool sayIt(string sentence, string& answer)
+        {
+        	if(sentence == "Orocos")
+        	{
+        		answer = "Hello Friend!";
+        		return true;
+        	}
+        	else
+        	{
+        		answer = "It's the enemy!! Atttaaaack!!";
+        		return false;
+        	}
+        }
+
         /**
          * This example sets the interface up in the Constructor
          * of the component.
@@ -74,9 +90,9 @@ namespace Example
             : TaskContext(name)
         {
             this->addOperation("getMessage", &Hello::getMessage, this).doc("Returns a friendly word.");
+            this->addOperation("sayIt", &Hello::sayIt, this).doc("Identifies friend from foe!");
         }
 
-        bool sayIt(string sentence, string& answer)
 
     };
 

@@ -8,6 +8,7 @@ loadComponent("hello","Example::Hello")
 loadComponent("world","Example::World")
 
 var double period = 0.5
+var string string_result = "empty"
 setActivity("hello", period, LowestPriority , ORO_SCHED_OTHER )
 setActivity("world", period, LowestPriority , ORO_SCHED_OTHER )
 
@@ -15,3 +16,5 @@ connectPeers("hello","world")
 
 hello.configure()
 hello.start()
+world.configure()
+world.start()
